@@ -31,10 +31,6 @@
                 scroll-behavior: smooth;
             }
             
-            html {
-                font-size: 12px;
-            }
-            
             img {
                 width: 100%;
                 height: 100%;
@@ -888,6 +884,9 @@
                 }
                 .images-badges-packet {
                     left: 5%;
+                }
+                .slider-btn {
+                    display: none;
                 }
             }
             
