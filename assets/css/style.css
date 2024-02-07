@@ -27,8 +27,11 @@
                 padding: 0;
                 box-sizing: border-box;
                 font-family: CirceRounded;
-                color: var(--main-color);
                 scroll-behavior: smooth;
+            }
+            
+            html {
+                font-size: 62.5%;
             }
             
             img {
@@ -41,7 +44,7 @@
             }
             
             section {
-                padding: 0px 14px;
+                padding: 0 2.2rem;
             }
             /* header styling */
             
@@ -1213,7 +1216,7 @@
             }
             /* Holidays Home Dubai section design */
             
-            #holidays-home-dubai h1 {
+            #holidays-home-dubai>h1 {
                 color: var(--main-color);
                 font-size: clamp(1.3rem, calc(1.15vw + 1.2rem), 3.8rem);
                 font-weight: 400;
@@ -1230,16 +1233,54 @@
                 cursor: pointer;
             }
             
-            #holidays-home-dubai .row .col .overlay {
+            .property-info {
                 position: absolute;
-                top: 0;
-                left: 0;
+                bottom: 2.5%;
+                display: flex;
+                justify-content: space-between;
                 width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.211);
-                opacity: 1;
-                z-index: 1;
-                pointer-events: none;
+                padding: 1rem 2rem;
+            }
+            
+            .property-info .name-area h1 {
+                color: white !important;
+                font-size: 2rem;
+                font-weight: 300;
+            }
+            
+            .aplliances {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-items: end;
+                gap: 1.8rem;
+            }
+            
+            .bed-packet,
+            .bath-packet {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .8rem;
+            }
+            
+            .bed-packet span,
+            .bed-packet i,
+            .bath-packet span,
+            .bath-packet i {
+                font-size: 3.2rem;
+                color: white;
+            }
+            
+            .name-area h1:first-child {
+                border-bottom: 2px solid white;
+                display: inline-block;
+                padding: .8rem 0;
+                text-transform: capitalize;
+            }
+            
+            .name-area h1:nth-child(2) {
+                margin-top: 1rem;
             }
             
             #holidays-home-dubai .row .col .property-image {
@@ -1247,6 +1288,7 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 0.4s ease;
+                filter: brightness(.8);
             }
             
             #holidays-home-dubai .row .col:hover .property-image {
@@ -1282,5 +1324,89 @@
                 }
                 .col-2 {
                     grid-column: 1/1;
+                }
+            }
+            /* media queruies for less than 5200px*/
+            
+            @media (width<=5200px) {
+                html {
+                    font-size: 220%;
+                }
+            }
+            
+            @media (width<=5000px) {
+                html {
+                    font-size: 200%;
+                }
+            }
+            
+            @media (width<=4500px) {
+                html {
+                    font-size: 180%;
+                }
+            }
+            
+            @media (width<=4000px) {
+                html {
+                    font-size: 160%;
+                }
+            }
+            
+            @media (width<=3500px) {
+                html {
+                    font-size: 140%;
+                }
+            }
+            
+            @media (width<=3000px) {
+                html {
+                    font-size: 120%;
+                }
+            }
+            
+            @media (width<=2500px) {
+                html {
+                    font-size: 100%;
+                }
+            }
+            
+            @media (width<=2000px) {
+                html {
+                    font-size: 80%;
+                }
+            }
+            
+            @media screen and (max-width: 1920px) and (min-width: 1500px) {
+                html {
+                    font-size: 68%;
+                }
+                .property-info .name-area h1 {
+                    color: white !important;
+                    font-size: 2.6rem;
+                    font-weight: 300;
+                }
+            }
+            
+            @media (width<=1500px) {
+                html {
+                    font-size: 60%;
+                }
+            }
+            
+            @media (width<=1280px) {
+                html {
+                    font-size: 55%;
+                }
+            }
+            
+            @media (width<=1024px) {
+                html {
+                    font-size: 50%;
+                }
+            }
+            
+            @media (width<992px) {
+                html {
+                    font-size: 50%;
                 }
             }
