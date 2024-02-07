@@ -1220,11 +1220,7 @@
                 color: var(--main-color);
                 font-size: clamp(1.3rem, calc(1.15vw + 1.2rem), 3.8rem);
                 font-weight: 400;
-                margin-bottom: 3.5rem;
-            }
-            
-            #holidays-home-dubai {
-                margin-top: 50px;
+                padding: 4rem 0;
             }
             
             #holidays-home-dubai .row .col {
@@ -1298,7 +1294,7 @@
             #holidays-home-dubai .row {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: 1.5fr 1.5fr;
+                grid-template-rows: 50rem 50rem;
                 gap: 2rem;
             }
             
@@ -1306,24 +1302,92 @@
                 grid-column: 2/4;
             }
             
+            .silver-container {
+                background-color: #edf3f8;
+                margin-top: 7rem;
+                padding-bottom: 8rem;
+            }
+            /* freee evaluation request */
+            
+            .bg-evaluation-section {
+                background-image: url('../images/img/property-worth.webp');
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 6.5rem;
+            }
+            
+            .content-container {
+                padding: 12rem 4rem;
+            }
+            
+            .bg-evaluation-section .content-container .container-text p,
+            h5 {
+                text-align: center;
+                color: white;
+                font-weight: 400;
+            }
+            
+            .bg-evaluation-section .content-container .container-text p {
+                font-size: 4rem;
+            }
+            
+            .bg-evaluation-section .content-container .container-text h5 {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+            }
+            
+            .form-container {
+                margin-top: 3.5rem;
+            }
+            
+            .form-container .input-group {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+            }
+            
+            .input-group .input-item input {
+                width: 100%;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                font-size: 1.55rem;
+                padding: 1.7rem 1.5rem;
+            }
+            
+            .input-group .input-item input:focus {
+                box-shadow: 0 0 6px 1px white;
+            }
+            /* grid media queries */
+            
             @media screen and (max-width:768px) {
                 #holidays-home-dubai .row {
                     grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(5, 300px);
+                    grid-template-rows: repeat(3, 50rem);
                     gap: 1.5rem;
                 }
                 .col-2 {
                     grid-column: 2/3;
+                }
+                .form-container .input-group {
+                    grid-template-columns: repeat(2, 1fr);
                 }
             }
             
             @media screen and (max-width:620px) {
                 #holidays-home-dubai .row {
                     grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: 40rem 40rem 40rem 40rem 40rem !important;
                     gap: 1.5rem;
                 }
                 .col-2 {
                     grid-column: 1/1;
+                }
+            }
+            
+            @media (width<=580px) {
+                .form-container .input-group {
+                    grid-template-columns: repeat(1, 1fr);
                 }
             }
             /* media queruies for less than 5200px*/
@@ -1397,11 +1461,20 @@
                 html {
                     font-size: 55%;
                 }
+                #holidays-home-dubai .row {
+                    grid-template-rows: 35rem 35rem;
+                }
+                .content-container {
+                    padding: 12rem 0;
+                }
             }
             
             @media (width<=1024px) {
                 html {
                     font-size: 50%;
+                }
+                .input-group .input-item input {
+                    padding: 1.4rem 1.2rem;
                 }
             }
             
