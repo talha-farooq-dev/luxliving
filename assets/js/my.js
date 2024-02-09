@@ -220,4 +220,18 @@ $(document).ready(function() {
 
     });
 
+
+    // evaluation request scroll
+
+    $('#free-validation-reuest-btn-packet').click(function() {
+        $('.bg-evaluation-section')[0].scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+
+
+
+
+
 });

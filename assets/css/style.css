@@ -28,6 +28,7 @@
                 box-sizing: border-box;
                 font-family: CirceRounded;
                 scroll-behavior: smooth;
+                font-weight: 400;
             }
             
             html {
@@ -1218,7 +1219,7 @@
             
             #holidays-home-dubai>h1 {
                 color: var(--main-color);
-                font-size: clamp(1.3rem, calc(1.15vw + 1.2rem), 3.8rem);
+                font-size: 3.2rem;
                 font-weight: 400;
                 padding: 4rem 0;
             }
@@ -1358,37 +1359,160 @@
             .input-group .input-item input:focus {
                 box-shadow: 0 0 6px 1px white;
             }
-            /* grid media queries */
+            /* Agents design */
             
-            @media screen and (max-width:768px) {
-                #holidays-home-dubai .row {
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(3, 50rem);
-                    gap: 1.5rem;
-                }
-                .col-2 {
-                    grid-column: 2/3;
-                }
-                .form-container .input-group {
-                    grid-template-columns: repeat(2, 1fr);
-                }
+            .agent-container {
+                margin-top: 3.5rem;
             }
             
-            @media screen and (max-width:620px) {
-                #holidays-home-dubai .row {
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: 40rem 40rem 40rem 40rem 40rem !important;
-                    gap: 1.5rem;
-                }
-                .col-2 {
-                    grid-column: 1/1;
-                }
+            .agent-main-div {
+                padding-top: 4.5rem;
+                padding-bottom: 3.5rem;
             }
             
-            @media (width<=580px) {
-                .form-container .input-group {
-                    grid-template-columns: repeat(1, 1fr);
-                }
+            .agent-main-div .textual-row>p {
+                font-size: 3.2rem;
+            }
+            
+            .agent-main-div .textual-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            /* .agent-container .row {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+                margin-top: 40px;
+            }
+             */
+            
+            .agent-container .row .col {
+                cursor: pointer;
+                overflow: hidden;
+                border-radius: .4rem;
+            }
+            
+            .agent-container .row .col .img-detail-packet {
+                position: relative;
+            }
+            
+            .agent-container .row .col .img-detail-packet>img {
+                width: 100%;
+                height: 100%;
+                transition: all 0.45s ease-in-out;
+            }
+            
+            .img-detail-packet {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .agents-overlay {
+                position: absolute;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.786);
+                padding: 1.8rem 1.8rem;
+                width: 100%;
+                height: 8rem;
+                transition: all 0.45s ease-in-out;
+                color: white;
+            }
+            
+            .agents-overlay h1 {
+                font-size: 2.2rem;
+                font-weight: 400;
+            }
+            
+            .agents-overlay h2 {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            
+            .brn-language {
+                margin-top: 2rem;
+            }
+            
+            .phone-packet {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1.5rem;
+            }
+            
+            .email-packet {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1.5rem;
+                border-bottom: 2px solid white;
+                padding: 1rem 0;
+            }
+            
+            .agents-overlay span {
+                font-size: 1.9rem;
+            }
+            
+            .profile-packet {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1.5rem;
+            }
+            
+            .profile-packet .profile-icon i {
+                font-size: 1.8rem;
+                margin-right: 5px;
+            }
+            
+            .profile-barcode img {
+                width: 15rem;
+                height: 15rem;
+            }
+            
+            .agent-container .row .col:hover .agents-overlay {
+                height: 100%;
+                border-radius: .4rem;
+            }
+            
+            .agent-container .row .col:hover .img-detail-packet>img {
+                border-radius: 0.4rem;
+                transform: scale(1.09);
+            }
+            
+            .profile-barcode {
+                height: 100%;
+            }
+            
+            .item {
+                overflow: hidden;
+                border-radius: .5rem;
+            }
+            
+            .owl-carousel .owl-nav {
+                display: none;
+            }
+            
+            .textual-row {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .agent-btns {
+                display: flex;
+                gap: .5rem;
+            }
+            
+            .agent-btns .custom-prev-btn,
+            .agent-btns .custom-next-btn {
+                background: none;
+                border: 1px solid rgba(128, 128, 128, 0.215);
+                border-radius: .2rem;
+                padding: .6rem .8rem;
+                cursor: pointer;
+            }
+            
+            .agent-btns .custom-prev-btn img,
+            .agent-btns .custom-next-btn img {
+                width: 2.8rem;
+                height: 2.8rem;
             }
             /* media queruies for less than 5200px*/
             
@@ -1420,11 +1544,51 @@
                 html {
                     font-size: 140%;
                 }
+                .agents-overlay h1 {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                }
+                .agents-overlay h2 {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
             }
             
             @media (width<=3000px) {
                 html {
                     font-size: 120%;
+                }
+                .agents-overlay {
+                    padding: 1.2rem 1.2rem;
+                }
+                .agents-overlay h1 {
+                    font-size: 1.6rem;
+                }
+                .agents-overlay h2 {
+                    font-size: 1.3rem;
+                }
+                .brn-language {
+                    margin-top: 1rem;
+                }
+                .phone-packet {
+                    margin-top: 1rem;
+                }
+                .email-packet {
+                    margin-top: 1rem;
+                    padding: .5rem 0;
+                }
+                .agents-overlay span {
+                    font-size: 1.6rem;
+                }
+                .profile-packet {
+                    margin-top: 1.6rem;
+                }
+                .profile-packet .profile-icon i {
+                    font-size: 1.6rem;
+                }
+                .profile-barcode img {
+                    width: 12.5rem;
+                    height: 100%;
                 }
             }
             
@@ -1434,9 +1598,83 @@
                 }
             }
             
+            @media (max-width:2000px) and (min-width:2250px) {
+                .agents-overlay {
+                    padding: 1.2rem 1.2rem;
+                }
+                .agents-overlay h1 {
+                    font-size: 1.8rem;
+                }
+                .agents-overlay h2 {
+                    font-size: 1.2rem;
+                }
+                .brn-language {
+                    margin-top: .8rem;
+                }
+                .phone-packet {
+                    margin-top: .8rem;
+                }
+                .email-packet {
+                    margin-top: .8rem;
+                    padding: .5rem 0;
+                }
+                .agents-overlay span {
+                    font-size: 1.5rem;
+                }
+                .profile-packet {
+                    margin-top: 1.5rem;
+                }
+                .profile-packet .profile-icon i {
+                    font-size: 1.8rem;
+                }
+                .profile-barcode img {
+                    width: 12rem;
+                    height: 100%;
+                }
+            }
+            
             @media (width<=2000px) {
                 html {
                     font-size: 80%;
+                }
+                .agents-overlay h1 {
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                }
+                .agents-overlay h2 {
+                    font-size: 2.1rem;
+                    font-weight: 400;
+                }
+                .brn-language {
+                    margin-top: .6rem;
+                }
+                .phone-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .6rem;
+                }
+                .email-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .6rem;
+                    border-bottom: 2px solid white;
+                    padding: 1rem 0;
+                }
+                .agents-overlay span {
+                    font-size: 1.9rem;
+                }
+                .profile-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1.5rem;
+                }
+                .profile-packet .profile-icon i {
+                    font-size: 1.8rem;
+                    margin-right: 5px;
+                }
+                .profile-barcode img {
+                    width: 13.5rem;
+                    height: 13.5rem;
                 }
             }
             
@@ -1455,6 +1693,10 @@
                 html {
                     font-size: 60%;
                 }
+                .profile-barcode img {
+                    width: 12rem;
+                    height: 12rem;
+                }
             }
             
             @media (width<=1280px) {
@@ -1467,6 +1709,39 @@
                 .content-container {
                     padding: 12rem 0;
                 }
+                .agents-overlay h1 {
+                    font-size: 1.8rem;
+                }
+                .agents-overlay h2 {
+                    font-size: 1.5rem;
+                }
+                .agents-overlay {
+                    padding: 1.2rem 1.8rem;
+                    /* height: 23%; */
+                }
+                .email-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .6rem;
+                    border-bottom: 2px solid white;
+                    padding: .6rem 0;
+                }
+                .agents-overlay span {
+                    font-size: 1.5rem;
+                }
+                .profile-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                }
+                .profile-packet .profile-icon i {
+                    font-size: 1.5rem;
+                    margin-right: 5px;
+                }
+                .profile-barcode img {
+                    width: 11rem;
+                    height: 11rem;
+                }
             }
             
             @media (width<=1024px) {
@@ -1476,10 +1751,230 @@
                 .input-group .input-item input {
                     padding: 1.4rem 1.2rem;
                 }
+                /* .agent-container .row {
+                    grid-template-columns: repeat(3, 1fr);
+                } */
+                .agents-overlay {
+                    padding: 1.5rem 1.8rem;
+                    /* height: 20%; */
+                }
+                .agents-overlay h1 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+                .agents-overlay h2 {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                }
+                .brn-language {
+                    margin-top: 1rem;
+                }
+                .phone-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                }
+                .email-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                    border-bottom: 2px solid white;
+                    padding: 1rem 0;
+                }
+                .agents-overlay span {
+                    font-size: 2rem;
+                }
+                .profile-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                }
+                .profile-packet .profile-icon i {
+                    font-size: 1.8rem;
+                    margin-right: 5px;
+                }
+                .profile-barcode img {
+                    width: 13.5rem;
+                    height: 13.5rem;
+                }
             }
             
             @media (width<992px) {
                 html {
                     font-size: 50%;
+                }
+                .agents-overlay {
+                    /* height: 22.5%; */
+                }
+                .agents-overlay h1 {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+                .agents-overlay h2 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+                .brn-language {
+                    margin-top: .6rem;
+                }
+                .phone-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .6rem;
+                }
+                .email-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .6rem;
+                    border-bottom: 2px solid white;
+                    padding: .5rem 0;
+                }
+                .agents-overlay span {
+                    font-size: 1.2rem;
+                }
+                .profile-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .6rem;
+                }
+                .profile-packet .profile-icon i {
+                    font-size: 1.1rem;
+                    margin-right: 5px;
+                }
+                .profile-barcode img {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            
+            @media screen and (max-width:768px) {
+                #holidays-home-dubai .row {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, 50rem);
+                    gap: 1.5rem;
+                }
+                .col-2 {
+                    grid-column: 2/3;
+                }
+                .form-container .input-group {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .agents-overlay {
+                    padding: 1.2rem 1.8rem;
+                    /* height: 25%; */
+                }
+            }
+            
+            @media screen and (max-width:620px) {
+                #holidays-home-dubai .row {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: 40rem 40rem 40rem 40rem 40rem !important;
+                    gap: 1.5rem;
+                }
+                .col-2 {
+                    grid-column: 1/1;
+                }
+                /* .agent-container .row {
+                    grid-template-columns: repeat(2, 1fr);
+                } */
+                .agents-overlay {
+                    /* height: 20%; */
+                }
+                .agents-overlay h1 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+                .agents-overlay h2 {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                }
+                .brn-language {
+                    margin-top: 1.5rem;
+                }
+                .phone-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1.5rem;
+                }
+                .email-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1.5rem;
+                    border-bottom: 2px solid white;
+                    padding: .5rem 0;
+                }
+                .agents-overlay span {
+                    font-size: 1.4rem;
+                }
+                .profile-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .6rem;
+                }
+                .profile-packet .profile-icon i {
+                    font-size: 1.4rem;
+                    margin-right: 5px;
+                }
+                .profile-barcode img {
+                    width: 12rem;
+                    height: 12rem;
+                }
+            }
+            
+            @media (width<=575px) {
+                .form-container .input-group {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .agent-container .row:first-child>p {
+                    font-size: 2.5rem;
+                }
+                /* .agent-container .row {
+                    grid-template-columns: repeat(1, 1fr);
+                } */
+                .agents-overlay h1 {
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                }
+                .agents-overlay h2 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+                .brn-language {
+                    margin-top: 1.8rem;
+                }
+                .phone-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1.8rem;
+                }
+                .email-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1.7rem;
+                    border-bottom: 2px solid white;
+                    padding: 1.2rem 0;
+                }
+                .agents-overlay span {
+                    font-size: 2.1rem;
+                }
+                .profile-packet {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1.5rem;
+                }
+                .profile-packet .profile-icon i {
+                    font-size: 2.2rem;
+                    margin-right: 5px;
+                }
+                .profile-barcode img {
+                    width: 18rem;
+                    height: 18rem;
+                }
+            }
+            
+            @media (width<=550px) {
+                .agents-overlay {
+                    padding: 1.5rem 1.8rem;
+                    /* height: 14%; */
                 }
             }
