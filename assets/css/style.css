@@ -1514,6 +1514,189 @@
                 width: 2.8rem;
                 height: 2.8rem;
             }
+            /* after agents headings and paragraphs */
+            
+            .after-agents-head-para {
+                margin-top: 2.5rem;
+            }
+            
+            .after-agents-head-para .head-para-packet h1 {
+                font-weight: bold;
+                font-size: 2.5rem;
+            }
+            
+            .after-agents-head-para .head-para-packet p {
+                font-size: 1.6rem;
+            }
+            
+            .after-agents-head-para .head-para-packet h6 {
+                font-weight: bold;
+                font-size: 1.8rem;
+            }
+            /* reviews section */
+            
+            .reviews-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 5rem 0;
+                background-color: #152b42;
+                gap: 5rem;
+                margin-top: 1rem;
+            }
+            
+            .reviews-and-title-container {
+                color: white;
+            }
+            
+            .reviews-and-title-container h1 {
+                font-size: 3.3rem;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            
+            .reviews-and-title-container p {
+                font-size: 2.1rem;
+                text-align: center;
+            }
+            
+            #star-span-area {
+                margin-left: .5rem;
+            }
+            
+            .reviews-section i {
+                color: gold;
+                font-size: 1.7rem !important;
+            }
+            
+            .reviews-and-title-container span a {
+                color: white;
+                text-decoration: underline;
+                margin-left: 1.5rem;
+            }
+            
+            .customer-info-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+            }
+            
+            .customer-info-container .first-letter-circle {
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+                background-color: #0000ff;
+                color: white;
+                font-size: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .customer-info-container .customer-name {
+                font-size: 2.3rem;
+                color: white;
+            }
+            
+            .customer-info-container .review-text p {
+                font-size: 1.85rem;
+                color: white;
+                text-align: center;
+            }
+            
+            .reviews-section .view-customer-btn-container {
+                border: 1px solid white;
+                outline: none;
+                background: none;
+                color: white;
+                font-size: 2.1rem;
+                padding: 1.4rem 3rem;
+                border-radius: .5rem;
+                font-weight: bold;
+                transition: all 0.4s linear;
+                cursor: pointer;
+            }
+            
+            .view-customer-btn-container i {
+                color: white;
+                font-size: 2.2rem !important;
+                margin-right: .5rem;
+                transition: all 0.4s linear;
+            }
+            
+            .reviews-section .view-customer-btn-container:hover {
+                background-color: white;
+                color: black !important;
+            }
+            
+            .reviews-section .view-customer-btn-container:hover i {
+                color: black;
+            }
+            
+            #review-crousel {
+                width: 80%;
+            }
+            
+            #review-crousel .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+            
+            #review-crousel .owl-item.active .item {
+                opacity: 1;
+            }
+            
+            .reviews-section {
+                position: relative;
+            }
+            
+            .reviews-btn-packet {
+                position: absolute;
+                width: 100%;
+                top: 50%;
+            }
+            
+            .reviews-btn-packet .review-custom-next-btn i,
+            .reviews-btn-packet .review-custom-prev-btn i {
+                color: white;
+                font-size: 2rem !important;
+                margin: .4rem;
+            }
+            
+            .reviews-btn-packet .review-custom-next-btn,
+            .reviews-btn-packet .review-custom-prev-btn {
+                background: none;
+                outline: none;
+                border: none;
+                cursor: pointer;
+            }
+            
+            .reviews-btn-packet .review-custom-next-btn {
+                position: absolute;
+                right: 0;
+            }
+            /* partner crousel */
+            
+            #partner-crousel .row {
+                border: 1px solid rgba(128, 128, 128, 0.464);
+                padding: 2rem 5rem;
+                border-radius: unset;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            #partner-crousel img {
+                width: 12rem !important;
+                height: 100% !important;
+            }
             /* media queruies for less than 5200px*/
             
             @media (width<=5200px) {
