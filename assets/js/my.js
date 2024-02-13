@@ -6,7 +6,6 @@ $(document).ready(function() {
         $('.unsocial-items ul li').removeClass('active');
         $(this).addClass('active');
     });
-
     var sliderImages;
 
     // Determine which slider is active
@@ -32,11 +31,23 @@ $(document).ready(function() {
         updateSlider();
     }
 
-    // Function to update the slider display including opacity
     function updateSlider() {
+        var currentImage = sliderImages.eq(currentSlide);
         sliderImages.css('opacity', 0); // Reset opacity for all images
-        sliderImages.eq(currentSlide).css('opacity', 1); // Set opacity to 1 for the current slide
+        currentImage.css('opacity', 1); // Set opacity to 1 for the current slide
+
+        // Show corresponding content with animation
+        var content = $('.images-badges-packet');
+        content.hide(); // Hide all content initially
+        var currentContent = content.eq(currentSlide);
+        currentContent.css({ opacity: 0, left: '0' }); // Initial position off-screen to the left
+        currentContent.show(); // Show the current content
+        currentContent.stop().animate({ opacity: 1, left: '+=20px' }, 500); // Stop any ongoing animation and animate 20px to the right
     }
+
+
+
+
 
     // Function to start autoplay
     function startAutoPlay() {
@@ -113,6 +124,24 @@ $(document).ready(function() {
 
     // Start handling opacity changes
     handleOpacityChange();
+
+
+
+    // navabar logic
+    $('.open-mobile-bar-btn').click(function() {
+        console.log("ok");
+        $('.unsocial-items').toggle();
+        if ($('#mobile-navigation-bar').css('display') == 'block') {
+            $('#mobile-navigation-bar').css('display', 'none');
+            $('#cross_navbar_mobile').css('display', 'block');
+        } else {
+            $('#cross_navbar_mobile').css('display', 'none');
+            $('#mobile-navigation-bar').css('display', 'block')
+        }
+
+
+    });
+
 
 
     // Allow typing in input fields by preventing default behavior on keydown events
@@ -231,7 +260,101 @@ $(document).ready(function() {
 
 
 
+    // Hide default buttons
+    $('.owl-nav').remove();
 
+    $('#agents-crousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        dots: false,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            530: {
+                items: 2
+            },
+            620: {
+                items: 3
+            },
+            1024: {
+                items: 4
+            },
+        }
+    });
+    // Custom button click handlers for agents
+    $('#agent-next').click(function() {
+        $('.agents-section .owl-carousel').trigger('next.owl.carousel');
+    });
+
+    $('#agent-perv').click(function() {
+        $('.agents-section .owl-carousel').trigger('prev.owl.carousel');
+    });
+    // review crousel
+    $('#review-crousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        center: true,
+        autoplay: true,
+        dots: false,
+        items: 1,
+        onInitialized: function(event) {
+            console.log("Carousel initialized");
+        },
+        onRefreshed: function(event) {
+            console.log("Carousel refreshed");
+        },
+        onChanged: function(event) {
+            console.log("Slide changed");
+        }
+    });
+
+
+
+    $('.review-custom-next-btn').click(function() {
+        $('.reviews-section .owl-carousel').trigger('next.owl.carousel');
+    });
+
+    $('.review-custom-prev-btn').click(function() {
+        $('.reviews-section .owl-carousel').trigger('prev.owl.carousel');
+    });
+
+    // partner crousel
+
+    $('#partner-crousel').owlCarousel({
+        loop: true,
+        nav: true,
+        items: 5,
+        autoplay: true,
+        dots: false,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            530: {
+                items: 2
+            },
+            620: {
+                items: 3
+            },
+            1024: {
+                items: 5
+            },
+        }
+    });
+    // Custom button click handlers for agents
+    $('#partner-next').click(function() {
+        $('.partner-section .owl-carousel').trigger('next.owl.carousel');
+    });
+
+    $('#partner-prev').click(function() {
+        $('.partner-section .owl-carousel').trigger('prev.owl.carousel');
+    });
 
 
 });

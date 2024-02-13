@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
 </head>
 
@@ -53,7 +54,7 @@
                             <a href="#" class="nav-links">Home</a>
                         </li>
                         <li class="drop-down nav-items">
-                            <a href="#" class="nav-links">Buy <span><i class="fa-solid fa-angle-down"></i></span></a>
+                            <div class="nav-links">Buy <span><i class="fa-solid fa-angle-down"></i></span></div>
                             <ul class="drop-down-content">
                                 <li>
                                     <a href="#" class="nav-sub-links">Appartments</a>
@@ -73,7 +74,7 @@
                             </ul>
                         </li>
                         <li class="drop-down nav-items">
-                            <a href="#" class="nav-links">Rent <span><i class="fa-solid fa-angle-down"></i></span></a>
+                            <div class="nav-links">Rent <span><i class="fa-solid fa-angle-down"></i></span></div>
                             <ul class="drop-down-content">
                                 <li>
                                     <a href="#" class="nav-sub-links">Appartments</a>
@@ -102,7 +103,7 @@
                             <a href="#" class="nav-links">Off Plan</a>
                         </li>
                         <li class="drop-down nav-items">
-                            <a href="#" class="nav-links">Guides <span><i class="fa-solid fa-angle-down"></i></span></a>
+                            <div class="nav-links">Guides <span><i class="fa-solid fa-angle-down"></i></span></div>
                             <ul class="drop-down-content">
                                 <li>
                                     <a href="#" class="nav-sub-links">Buyer's Guide</a>
@@ -116,7 +117,7 @@
                             <a href="#" class="nav-links">Services</a>
                         </li>
                         <li class="drop-down  nav-items">
-                            <a href="#" class="nav-links">About <span><i class="fa-solid fa-angle-down"></i></span></a>
+                            <div class="nav-links">About <span><i class="fa-solid fa-angle-down"></i></span></div>
                             <ul class="drop-down-content">
                                 <li>
                                     <a href="#" class="nav-sub-links">Overview</a>
@@ -159,6 +160,7 @@
                 </a>
                 <div class="open-mobile-bar-btn">
                     <i class="fa-solid fa-bars" id="mobile-navigation-bar"></i>
+                    <i class="fa fa-times" aria-hidden="true" id="cross_navbar_mobile"></i>
                 </div>
             </div>
         </div>
@@ -172,8 +174,10 @@
         <img src="./assets/images/slider/mobile-slider-2.webp" alt="img no found" class="slider-img mobile-banner">
         <img src="./assets/images/slider/mobile-slider-3.webp" alt="img no found" class="slider-img mobile-banner">
         <img src="./assets/images/slider/mobile-slider-4.webp" alt="img no found" class="slider-img mobile-banner">
-        <div class="slider-btn" id="previous-btn"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></div>
-        <div class="slider-btn" id="next-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+        <!-- <div class="slider-btn" id="previous-btn"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></div>
+        <div class="slider-btn" id="next-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div> -->
+        <div id="previous-btn" class="slider-btn"><img src="./assets/images/uploads/images/arrow-left.png" alt="img no found"></div>
+        <div id="next-btn" class="slider-btn"><img src="./assets/images/uploads/images/arrow-right.png" alt="img no found"></div>
         <div class="serch-navigation-header">
             <div class="searching-section-on-hero">
                 <div class="input-pack">
@@ -405,6 +409,24 @@
             </div>
             <input type="hidden" id="accessability" value="">
         </div>
+        <a href="#" class="images-badges-packet">
+            <span>Villa | Sale</span>
+            <span>AED 17,999,999</span>
+            <span>Palm Jebel Ali</span>
+            <span>6 Beds | 7 Baths | 7,876 Sq.Ft</span>
+        </a>
+        <a href="#" class="images-badges-packet">
+            <span>Apartment | Sale</span>
+            <span>AED 53,667,800</span>
+            <span>Palm Jumeirah</span>
+            <span>6 Beds | 7 Baths | 7,876 Sq.Ft</span>
+        </a>
+        <a href="#" class="images-badges-packet">
+            <span>Villa | Sale</span>
+            <span>AED 17,999,999</span>
+            <span>Palm Jebel Ali</span>
+            <span>6 Beds | 7 Baths | 7,876 Sq.Ft</span>
+        </a>
         <a href="#" class="images-badges-packet">
             <span>Villa | Sale</span>
             <span>AED 17,999,999</span>
@@ -745,6 +767,9 @@
                         <div class="input-item">
                             <input type="text" placeholder="Property Address" name="property_address">
                         </div>
+                    </div>
+                    <div class="vaidation-recapctha-submit-btn">
+                        <!-- <div class="g-recaptcha" data-siteKey="6Lcif3ApAAAAAPf4B5A67241EN3R7Faj4lMZsNij"></div> -->
                     </div>
                 </form>
             </div>
@@ -1638,7 +1663,7 @@
                 <img src="./assets/images/uploads/developer_logo/meteora-properties-logo.webp" alt="img no found">
             </div>
             <div class="item row ">
-                <img src="./assets/images/uploads/developer_logo/nakheel-properties-logo.webp" alt="img no found">
+                <img src="./asTsets/images/uploads/developer_logo/nakheel-properties-logo.webp" alt="img no found">
             </div>
             <div class="item row ">
                 <img src="./assets/images/uploads/developer_logo/nshama-properties-logo.webp" alt="img no found">
@@ -1651,105 +1676,113 @@
             </div>
         </div>
     </section>
-    <script>
-        $(document).ready(function() {
-            // Hide default buttons
-            $('.owl-nav').remove();
+    <!-- footer start -->
+    <footer class="footer">
+        <section class="footer-section">
+            <div class="footer-container">
+                <div class="items">
+                    <div class="footer-logo">
+                        <img src="./assets/images/img/logos/luxliving-white.svg" alt="logo">
+                    </div>
+                    <div class="footer-social-items">
+                        <ul>
+                            <li>
+                                <a href="tel:+97145722929"><span><i class="fa-solid fa-phone"></i></i></span>+971 4 572 2929</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@luxliving.ae"><span><i class="fa-regular fa-envelope-open"></i></span>info@luxliving.ae</a>
+                            </li>
+                            <li>
+                                <a href="https://maps.app.goo.gl/ndBLhe7upFtM2tCk9"><span><i class="fa-solid fa-location-dot"></i></i></span>Office 201, Stadium Point, Dubai Sports City, Dubai, UAE</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-social-items">
+                        <a href="#">
+                            <div class="social-circles"><i class="fa-brands fa-facebook"></i></div>
+                        </a>
+                        <a href="#">
+                            <div class="social-circles"><i class="fa-brands fa-instagram"></i></div>
+                        </a>
+                        <a href="#">
+                            <div class="social-circles"><i class="fa-brands fa-linkedin"></i></div>
+                        </a>
+                        <a href="#">
+                            <div class="social-circles"><i class="fa-brands fa-youtube"></i></div>
+                        </a>
+                        <a href="#">
+                            <div class="social-circles"><i class="fa-brands fa-tiktok"></i></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="items">
+                    <h1>Dubai Properties For Sale</h1>
+                    <ul>
+                        <li>
+                            <a href="#">Apartments For Sale in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Villas For Sale in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Townhouses For Sale in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Offices For Sale in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Penthouses For Sale in Dubai</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <h1>Dubai Properties For Rent</h1>
+                    <ul>
+                        <li>
+                            <a href="#">Apartments For Rent in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Villas For Rent in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Townhouses For Rent in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Offices For Rent in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Penthouses For Rent in Dubai</a>
+                        </li>
+                        <li>
+                            <a href="#">Holiday Homes For Rent in Dubai</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <h1>Let's Hear From You</h1>
+                    <form action="" class="footer-form">
+                        <div class="form-input-group">
+                            <div class="form-input-item">
+                                <input type="text" name="" id="" placeholder="Name">
+                            </div>
+                            <div class="form-input-item">
+                                <input type="text" name="" id="" placeholder="Phone Number">
+                            </div>
+                            <div class="form-input-item">
+                                <input type="text" name="" id="" placeholder="Email">
+                            </div>
+                            <div class="btn-captcha-section">
+                                <button class="submit-btn">Submit</button>
+                                <!-- <div class="g-recaptcha" data-siteKey="6Lcif3ApAAAAAPf4B5A67241EN3R7Faj4lMZsNij"></div> -->
+                            </div>
+                        </div>
 
-            $('#agents-crousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                autoplay: true,
-                dots: false,
-
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    530: {
-                        items: 2
-                    },
-                    620: {
-                        items: 3
-                    },
-                    1024: {
-                        items: 4
-                    },
-                }
-            });
-            // Custom button click handlers for agents
-            $('#agent-next').click(function() {
-                $('.agents-section .owl-carousel').trigger('next.owl.carousel');
-            });
-
-            $('#agent-perv').click(function() {
-                $('.agents-section .owl-carousel').trigger('prev.owl.carousel');
-            });
-            // review crousel
-            $('#review-crousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                center: true,
-                autoplay: true,
-                dots: false,
-                items: 1,
-                onInitialized: function(event) {
-                    console.log("Carousel initialized");
-                },
-                onRefreshed: function(event) {
-                    console.log("Carousel refreshed");
-                },
-                onChanged: function(event) {
-                    console.log("Slide changed");
-                }
-            });
-
-
-
-            $('.review-custom-next-btn').click(function() {
-                $('.reviews-section .owl-carousel').trigger('next.owl.carousel');
-            });
-
-            $('.review-custom-prev-btn').click(function() {
-                $('.reviews-section .owl-carousel').trigger('prev.owl.carousel');
-            });
-
-            // partner crousel
-
-            $('#partner-crousel').owlCarousel({
-                loop: true,
-                nav: true,
-                items: 5,
-                autoplay: true,
-                dots: false,
-
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    530: {
-                        items: 2
-                    },
-                    620: {
-                        items: 3
-                    },
-                    1024: {
-                        items: 5
-                    },
-                }
-            });
-            // Custom button click handlers for agents
-            $('#partner-next').click(function() {
-                $('.partner-section .owl-carousel').trigger('next.owl.carousel');
-            });
-
-            $('#partner-prev').click(function() {
-                $('.partner-section .owl-carousel').trigger('prev.owl.carousel');
-            });
-        });
-    </script>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer end -->
     <script src="./assets/js/my.js"></script>
 </body>
 
